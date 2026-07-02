@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Learn | LearnDNA AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="form-card">
+
+        <h1>Learn a New Topic</h1>
+
+        <p>
+            Enter any topic and LearnDNA AI will explain it
+            according to your learning preference.
+        </p>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+
+                {% for category, message in messages %}
+
+                    <div class="flash {{ category }}">
+                        {{ message }}
+                    </div>
+
+                {% endfor %}
+
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+
+            <label>Topic</label>
+
+            <input
+                type="text"
+                name="topic"
+                placeholder="Example: Binary Search"
+                required
+            >
+
+            <button type="submit">
+
+                🚀 Learn Now
+
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="{{ url_for('dashboard') }}" class="btn secondary">
+
+            ← Back to Dashboard
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

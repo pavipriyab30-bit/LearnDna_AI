@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | LearnDNA AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="profile-card">
+
+        <h1>👤 My Profile</h1>
+
+        <hr>
+
+        <div class="profile-info">
+
+            <p>
+
+                <strong>Name:</strong>
+
+                {{ user.name }}
+
+            </p>
+
+            <p>
+
+                <strong>Email:</strong>
+
+                {{ user.email }}
+
+            </p>
+
+            <p>
+
+                <strong>Learning Style:</strong>
+
+                {{ user.learning_style }}
+
+            </p>
+
+            <p>
+
+                <strong>Difficulty:</strong>
+
+                {{ user.difficulty }}
+
+            </p>
+
+            <p>
+
+                <strong>Language:</strong>
+
+                {{ user.language }}
+
+            </p>
+
+            <p>
+
+                <strong>Topics Learned:</strong>
+
+                {{ total_topics }}
+
+            </p>
+
+        </div>
+
+        <hr>
+
+        <div class="dashboard-buttons">
+
+            <a href="{{ url_for('dashboard') }}" class="btn">
+
+                Dashboard
+
+            </a>
+
+            <a href="{{ url_for('learn') }}" class="btn secondary">
+
+                Learn New Topic
+
+            </a>
+
+            <a href="{{ url_for('history') }}" class="btn secondary">
+
+                Learning History
+
+            </a>
+
+            <a href="{{ url_for('logout') }}" class="btn danger">
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

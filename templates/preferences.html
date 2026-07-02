@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Learning Preferences | LearnDNA AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="form-card">
+
+        <h1>Learning Preferences</h1>
+
+        <p>
+            Tell LearnDNA AI how you prefer to learn.
+        </p>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+
+                {% for category, message in messages %}
+
+                    <div class="flash {{ category }}">
+                        {{ message }}
+                    </div>
+
+                {% endfor %}
+
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+
+            <label>Learning Style</label>
+
+            <select name="learning_style" required>
+
+                <option value="">Select</option>
+
+                <option value="Story">Story</option>
+
+                <option value="Step by Step">Step by Step</option>
+
+                <option value="Real Life Example">Real Life Example</option>
+
+                <option value="Coding">Coding</option>
+
+                <option value="Visual">Visual</option>
+
+            </select>
+
+            <label>Difficulty</label>
+
+            <select name="difficulty" required>
+
+                <option value="Beginner">Beginner</option>
+
+                <option value="Intermediate">Intermediate</option>
+
+                <option value="Advanced">Advanced</option>
+
+            </select>
+
+            <label>Language</label>
+
+            <select name="language" required>
+
+                <option value="English">English</option>
+
+                <option value="Tamil">Tamil</option>
+
+                <option value="Hindi">Hindi</option>
+
+            </select>
+
+            <button type="submit">
+
+                Save Preferences
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

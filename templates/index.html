@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LearnDNA AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="hero">
+
+            <h1>🧬 LearnDNA AI</h1>
+
+            <p class="subtitle">
+                Learn concepts the way <strong>you</strong> understand them best.
+            </p>
+
+            <p>
+                LearnDNA AI uses Artificial Intelligence to explain any topic
+                according to your preferred learning style.
+            </p>
+
+            <div class="buttons">
+
+                <a href="{{ url_for('register') }}" class="btn">
+                    Get Started
+                </a>
+
+                <a href="{{ url_for('login') }}" class="btn secondary">
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

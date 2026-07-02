@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Learning Result | LearnDNA AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="result-card">
+
+        <h1>{{ topic }}</h1>
+
+        <p>
+            Personalized explanation generated according to your learning preference.
+        </p>
+
+        <hr>
+
+        <h2>📘 AI Explanation</h2>
+
+        <div class="content-box">
+
+            {{ explanation }}
+
+        </div>
+
+        <hr>
+
+        <h2>📝 Quiz</h2>
+
+        <div class="content-box">
+
+            {{ quiz }}
+
+        </div>
+
+        <hr>
+
+        <div class="dashboard-buttons">
+
+            <a href="{{ url_for('learn') }}" class="btn">
+                Learn Another Topic
+            </a>
+
+            <a href="{{ url_for('dashboard') }}" class="btn secondary">
+                Dashboard
+            </a>
+
+            <a href="{{ url_for('history') }}" class="btn secondary">
+                Learning History
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

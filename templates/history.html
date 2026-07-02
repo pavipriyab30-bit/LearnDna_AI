@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Learning History | LearnDNA AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="history-card">
+
+        <h1>📚 Learning History</h1>
+
+        <p>
+            Review the concepts you have already learned.
+        </p>
+
+        <hr>
+
+        {% if history %}
+
+            {% for item in history %}
+
+            <div class="history-item">
+
+                <h2>
+
+                    {{ item.topic }}
+
+                </h2>
+
+                <small>
+
+                    {{ item.created_at.strftime("%d %B %Y %I:%M %p") }}
+
+                </small>
+
+                <hr>
+
+                <h3>AI Explanation</h3>
+
+                <div class="content-box">
+
+                    {{ item.explanation }}
+
+                </div>
+
+                <h3>Quiz</h3>
+
+                <div class="content-box">
+
+                    {{ item.quiz }}
+
+                </div>
+
+            </div>
+
+            <br>
+
+            {% endfor %}
+
+        {% else %}
+
+            <p>
+
+                No learning history found.
+
+            </p>
+
+        {% endif %}
+
+        <hr>
+
+        <div class="dashboard-buttons">
+
+            <a href="{{ url_for('learn') }}" class="btn">
+
+                Learn New Topic
+
+            </a>
+
+            <a href="{{ url_for('dashboard') }}" class="btn secondary">
+
+                Dashboard
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

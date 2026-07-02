@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | LearnDNA AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="dashboard-card">
+
+        <h1>
+            Welcome, {{ user.name }} 👋
+        </h1>
+
+        <p>
+            Ready to learn something new today?
+        </p>
+
+        <hr>
+
+        <div class="profile-summary">
+
+            <h3>Your Learning Preference</h3>
+
+            <p>
+                <strong>Learning Style:</strong>
+                {{ user.learning_style }}
+            </p>
+
+            <p>
+                <strong>Difficulty:</strong>
+                {{ user.difficulty }}
+            </p>
+
+            <p>
+                <strong>Language:</strong>
+                {{ user.language }}
+            </p>
+
+        </div>
+
+        <hr>
+
+        <div class="dashboard-buttons">
+
+            <a href="{{ url_for('learn') }}" class="btn">
+                📘 Learn New Topic
+            </a>
+
+            <a href="{{ url_for('history') }}" class="btn secondary">
+                📚 Learning History
+            </a>
+
+            <a href="{{ url_for('profile') }}" class="btn secondary">
+                👤 Profile
+            </a>
+
+            <a href="{{ url_for('logout') }}" class="btn danger">
+                Logout
+            </a>
+
+        </div>
+
+        <hr>
+
+        <h2>Recent Topics</h2>
+
+        {% if history %}
+
+            <ul class="history-list">
+
+                {% for item in history %}
+
+                    <li>
+
+                        <strong>{{ item.topic }}</strong>
+
+                        <br>
+
+                        <small>
+
+                            {{ item.created_at.strftime("%d %b %Y %I:%M %p") }}
+
+                        </small>
+
+                    </li>
+
+                {% endfor %}
+
+            </ul>
+
+        {% else %}
+
+            <p>
+                You haven't learned any topics yet.
+            </p>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

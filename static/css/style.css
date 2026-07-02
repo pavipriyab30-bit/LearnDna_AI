@@ -1,0 +1,498 @@
+/* =====================================================
+   LearnDNA AI
+   Global Styles
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#f4f7fb;
+
+    color:#222;
+
+    line-height:1.6;
+
+}
+
+.container{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:40px auto;
+
+}
+
+/* =====================================================
+   Hero Section
+===================================================== */
+
+.hero{
+
+    background:white;
+
+    padding:60px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+.hero h1{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+    color:#1e40af;
+
+}
+
+.subtitle{
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+    color:#555;
+
+}
+
+.hero p{
+
+    margin-bottom:15px;
+
+}
+
+/* =====================================================
+   Forms
+===================================================== */
+
+.form-card{
+
+    background:white;
+
+    max-width:550px;
+
+    margin:auto;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+.form-card h1{
+
+    margin-bottom:10px;
+
+    color:#1e40af;
+
+}
+
+.form-card p{
+
+    margin-bottom:25px;
+
+}
+
+label{
+
+    display:block;
+
+    margin-top:15px;
+
+    margin-bottom:6px;
+
+    font-weight:bold;
+
+}
+
+input,
+select{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+}
+
+input:focus,
+select:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+}
+
+/* =====================================================
+   Buttons
+===================================================== */
+
+button,
+.btn{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    transition:0.3s;
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+button:hover,
+.btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+.secondary{
+
+    background:#6b7280;
+
+}
+
+.secondary:hover{
+
+    background:#4b5563;
+
+}
+
+.danger{
+
+    background:#dc2626;
+
+}
+
+.danger:hover{
+
+    background:#b91c1c;
+
+}
+
+/* =====================================================
+   Button Container
+===================================================== */
+
+.buttons{
+
+    margin-top:30px;
+
+}
+
+.dashboard-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+/* =====================================================
+   Flash Messages
+===================================================== */
+
+.flash{
+
+    padding:12px;
+
+    border-radius:8px;
+
+    margin-bottom:20px;
+
+    color:white;
+
+}
+
+.flash.success{
+
+    background:#16a34a;
+
+}
+
+.flash.warning{
+
+    background:#ca8a04;
+
+}
+
+.flash.danger{
+
+    background:#dc2626;
+
+}
+
+.bottom-text{
+
+    margin-top:20px;
+
+    text-align:center;
+
+}
+
+.bottom-text a{
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+}
+
+.bottom-text a:hover{
+
+    text-decoration:underline;
+
+}
+/* =====================================================
+   Dashboard
+===================================================== */
+
+.dashboard-card,
+.profile-card,
+.history-card,
+.result-card{
+
+    background:#ffffff;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+.dashboard-card h1,
+.profile-card h1,
+.history-card h1,
+.result-card h1{
+
+    color:#1e40af;
+
+    margin-bottom:15px;
+
+}
+
+.profile-summary{
+
+    margin:20px 0;
+
+}
+
+.profile-summary p{
+
+    margin:10px 0;
+
+}
+
+/* =====================================================
+   History
+===================================================== */
+
+.history-list{
+
+    margin-top:20px;
+
+    list-style:none;
+
+}
+
+.history-list li{
+
+    padding:15px;
+
+    background:#f8fafc;
+
+    border-radius:10px;
+
+    margin-bottom:15px;
+
+    border-left:5px solid #2563eb;
+
+}
+
+.history-item{
+
+    background:#f8fafc;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    margin-bottom:30px;
+
+    border-left:5px solid #2563eb;
+
+}
+
+.history-item h2{
+
+    color:#1e40af;
+
+    margin-bottom:8px;
+
+}
+
+.history-item small{
+
+    color:#666;
+
+}
+
+/* =====================================================
+   Profile
+===================================================== */
+
+.profile-info{
+
+    margin-top:20px;
+
+}
+
+.profile-info p{
+
+    margin:12px 0;
+
+    font-size:17px;
+
+}
+
+/* =====================================================
+   Result Page
+===================================================== */
+
+.content-box{
+
+    margin-top:15px;
+
+    margin-bottom:20px;
+
+    padding:20px;
+
+    background:#f8fafc;
+
+    border-radius:10px;
+
+    border:1px solid #dbeafe;
+
+    white-space:pre-wrap;
+
+    overflow-wrap:anywhere;
+
+    line-height:1.8;
+
+}
+
+/* =====================================================
+   Horizontal Line
+===================================================== */
+
+hr{
+
+    margin:25px 0;
+
+    border:none;
+
+    border-top:1px solid #ddd;
+
+}
+
+/* =====================================================
+   Responsive Design
+===================================================== */
+
+@media(max-width:768px){
+
+    .container{
+
+        width:95%;
+
+        margin:20px auto;
+
+    }
+
+    .hero{
+
+        padding:30px;
+
+    }
+
+    .hero h1{
+
+        font-size:34px;
+
+    }
+
+    .subtitle{
+
+        font-size:18px;
+
+    }
+
+    .form-card,
+    .dashboard-card,
+    .profile-card,
+    .history-card,
+    .result-card{
+
+        padding:25px;
+
+    }
+
+    .dashboard-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .btn,
+    button{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
