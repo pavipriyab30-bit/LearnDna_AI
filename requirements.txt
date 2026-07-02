@@ -4,3 +4,5 @@ SQLAlchemy
 Werkzeug
 python-dotenv
 google-genai
+gunicorn
+other-packages-you-used
