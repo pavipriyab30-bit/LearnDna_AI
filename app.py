@@ -228,7 +228,7 @@ def learn():
        #    topic=topic,
        #     explanation=explanation
        # )
-             quiz=" "
+       quiz=[]
 
         learning = LearningHistory(
             topic=topic,
