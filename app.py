@@ -224,10 +224,11 @@ def learn():
             language=user.language
         )
 
-        quiz = generate_quiz(
-            topic=topic,
-            explanation=explanation
-        )
+       # quiz = generate_quiz(
+       #    topic=topic,
+       #     explanation=explanation
+       # )
+       quiz=" "
 
         learning = LearningHistory(
             topic=topic,
